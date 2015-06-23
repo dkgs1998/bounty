@@ -5,6 +5,11 @@
 <table>
   <thead>
     <tr>
+      <th>Poster</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Deadline</th>
+      <th>Amount</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +17,11 @@
   <tbody>
     <% @bounties.each do |bounty| %>
       <tr>
+        <td><%= bounty.poster_id %></td>
+        <td><%= bounty.title %></td>
+        <td><%= bounty.description %></td>
+        <td><%= bounty.deadline %></td>
+        <td><%= bounty.amount %></td>
         <td><%= link_to 'Show', bounty %></td>
         <td><%= link_to 'Edit', edit_bounty_path(bounty) %></td>
         <td><%= link_to 'Destroy', bounty, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -18,7 +18,7 @@ class BountiesControllerTest < ActionController::TestCase
 
   test "should create bounty" do
     assert_difference('Bounty.count') do
-      post :create, bounty: {  }
+      post :create, bounty: { amount: @bounty.amount, deadline: @bounty.deadline, description: @bounty.description, poster_id: @bounty.poster_id, title: @bounty.title }
     end
 
     assert_redirected_to bounty_path(assigns(:bounty))
@@ -35,7 +35,7 @@ class BountiesControllerTest < ActionController::TestCase
   end
 
   test "should update bounty" do
-    patch :update, id: @bounty, bounty: {  }
+    patch :update, id: @bounty, bounty: { amount: @bounty.amount, deadline: @bounty.deadline, description: @bounty.description, poster_id: @bounty.poster_id, title: @bounty.title }
     assert_redirected_to bounty_path(assigns(:bounty))
   end
 

@@ -1,4 +1,29 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Poster:</strong>
+  <%= @bounty.poster_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @bounty.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bounty.description %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @bounty.deadline %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @bounty.amount %>
+</p>
+
 <%= link_to 'Edit', edit_bounty_path(@bounty) %> |
 <%= link_to 'Back', bounties_path %>

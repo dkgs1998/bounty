@@ -69,6 +69,6 @@ class BountiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bounty_params
-      params[:bounty]
+      params.require(:bounty).permit(:poster_id, :title, :description, :deadline, :amount)
     end
 end
