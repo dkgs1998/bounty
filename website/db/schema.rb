@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150623225450) do
+ActiveRecord::Schema.define(version: 20150623234002) do
+
+  create_table "answers", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text"
+    t.integer  "hunter_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "bounties", force: :cascade do |t|
     t.integer  "poster_id"
@@ -21,6 +29,11 @@ ActiveRecord::Schema.define(version: 20150623225450) do
     t.float    "amount"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "bounties_hunters", id: false, force: :cascade do |t|
+    t.integer "bounty_id"
+    t.integer "hunter_id"
   end
 
   create_table "tags", force: :cascade do |t|
