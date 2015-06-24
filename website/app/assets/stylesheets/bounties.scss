@@ -1,3 +1,21 @@
 // Place all the styles related to the Bounties controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.bountyshowoff
+{
+	height: 180px;
+
+	border-width:1px;
+	border-color:gray;
+	border-bottom-style: inset;
+
+
+    width:42%;
+    margin:auto;
+}
+.in_bountyshowoff
+{
+	height:75px;
+	position:relative;
+	top:49px;
+}
