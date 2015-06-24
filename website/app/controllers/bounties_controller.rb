@@ -1,5 +1,6 @@
 class BountiesController < ApplicationController
   before_action :set_bounty, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:index, :show]
 
   # GET /bounties
   # GET /bounties.json
@@ -70,5 +71,10 @@ class BountiesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def bounty_params
       params.require(:bounty).permit(:poster_id, :title, :description, :deadline, :amount)
+    end
+
+    #TODO!!!!! Change login to not just set empty user but check if user is signed in
+    def set_user
+      @user = User.new
     end
 end

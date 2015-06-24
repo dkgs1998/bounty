@@ -7,7 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= form_tag(:controller=> "users", :action => "create" , method: "post") do %>
 
+  <%= label_tag(:username, "email:") %>
+  <%= text_field_tag("user[email]") %>
+
+  <%= password_field_tag("user[password]") %>
+
+	<%= text_area_tag("user[description]","description", size: "24x6") %>
+
+  <%= submit_tag("Register") %>
+<%end%>
 <%= yield %>
 
 </body>

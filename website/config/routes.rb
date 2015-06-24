@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'bounties#index'
+
+  post 'users/new'
   get 'tags/index'
 
   get 'tags/show'
