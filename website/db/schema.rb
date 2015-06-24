@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150623234002) do
+ActiveRecord::Schema.define(version: 20150624003622) do
 
   create_table "answers", force: :cascade do |t|
     t.string   "title"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20150623234002) do
 
   create_table "bounties_hunters", id: false, force: :cascade do |t|
     t.integer "bounty_id"
-    t.integer "hunter_id"
+    t.string  "user_id"
   end
 
   create_table "tags", force: :cascade do |t|
