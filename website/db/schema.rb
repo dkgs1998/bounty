@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20150624003622) do
+=======
 ActiveRecord::Schema.define(version: 20150624003032) do
+>>>>>>> 2f7c52c21d611e4712ed22e72f126a9989facaa8
 
   create_table "answers", force: :cascade do |t|
     t.string   "title"
@@ -35,7 +39,7 @@ ActiveRecord::Schema.define(version: 20150624003032) do
 
   create_table "bounties_hunters", id: false, force: :cascade do |t|
     t.integer "bounty_id"
-    t.integer "hunter_id"
+    t.string  "user_id"
   end
 
   create_table "bounties_tags", id: false, force: :cascade do |t|
